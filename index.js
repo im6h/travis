@@ -1,15 +1,7 @@
 const express = require('express');
-
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello Travis');
-});
-app.post('/', (req, res) => {
-  const body = req.body;
-  console.log(body);
-  res.send(body);
-});
+app.use('/api/v1', require('./router.js'));
 
 const server = app.listen(3000, () => {
   console.log('App running on port 3000');
