@@ -4,3 +4,9 @@ node_js:
 cache:
   directories:
     - "node_modules"
+install:
+  - npm install
+script:
+  - node index.js
+after_success:
+  - npm run test
