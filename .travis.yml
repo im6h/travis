@@ -7,6 +7,7 @@ cache:
 install:
   - npm install
 script:
+  - npm run test
   - node index.js
 after_success:
   - npm run test
